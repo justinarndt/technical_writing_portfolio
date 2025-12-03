@@ -1,4 +1,11 @@
-API Reference: Data Normalization EndpointThe /normalize endpoint accepts a raw dataset (JSON) and returns a clean, normalized feature set suitable for machine learning models.POST /v1/data/normalizeUse this endpoint to remove null values, scale numerical features between 0 and 1, and encode categorical variables.Request ParametersParameterTypeRequiredDescriptiondataset_idstringYesThe unique UUID of the uploaded dataset.methodstringNoThe scaling method. Options: minmax (default) or standard.drop_nullsbooleanNoIf true, rows containing NaN values are removed. Default: true.Example Request (Python)import requests
+API Reference: Data Normalization Endpoint
+The /normalize endpoint accepts a raw dataset (JSON) and returns a clean, normalized feature set suitable for machine learning models.
+
+POST /v1/data/normalize
+Use this endpoint to remove null values, scale numerical features between 0 and 1, and encode categorical variables.
+
+Request Parameters
+ParameterTypeRequiredDescriptiondataset_idstringYesThe unique UUID of the uploaded dataset.methodstringNoThe scaling method. Options: minmax (default) or standard.drop_nullsbooleanNoIf true, rows containing NaN values are removed. Default: true.Example Request (Python)import requests
 
 url = "[https://api.analytics-engine.com/v1/data/normalize](https://api.analytics-engine.com/v1/data/normalize)"
 
